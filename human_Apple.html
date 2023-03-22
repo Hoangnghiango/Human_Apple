@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Apple {
+            constructor(weight) {
+                this.weight = weight;
+            }
+            getWeight() {
+                return this.weight;
+            }
+            setWeight() {
+                this.weight = weight;
+            }
+            isEmpty() {
+                if (this.weight <= 0) {
+                    return true;
+                } else {
+                    return false;
+                }
+            };
+            decrease() {
+                if (this.isEmpty()) {
+                    alert("Out of apple!!!");
+                } else {
+                    this.weight -= 1;
+                }
+            }
+        }
+        class Human {
+            constructor(name, gender, weight) {
+                this.name = name;
+                this.gender = gender;
+                this.weight = weight;
+            }
+            isMale() {
+                if (this.gender == 1) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+            getGender() {
+                if (this.isMale()) {
+                    return "Male";
+                } else {
+                    return "Female";
+                }
+            }
+            setGender() {
+                this.gender = gender;
+            }
+
+            getName() {
+                return this.name;
+            }
+            setName() {
+                this.name = name;
+            }
+            getWeight() {
+                return this.weight;
+            }
+            setWeight() {
+                this.weight = weight;
+            }
+            say(string) {
+                alert(string);
+            }
+            checkApple(apple) {
+                return apple.isEmpty();
+
+            }
+            eatApple(apple) {
+                if (apple.getWeight() <= 0) {
+                    alert("An het tao!!!");
+
+                } else {
+                    apple.decrease();
+                    this.weight += 1;
+                }
+            }
+        }
+        let adam = new Human("ADAM", 1, 70);
+        let eva = new Human("Eva", 0, 55);
+        let tao01 = new Apple(3);
+
+
+
+        while (tao01.isEmpty() != true) {
+            adam.say("OMEOI thèm táo quáaaaaaaaa");
+            adam.eatApple(tao01);
+            eva.say("OMEOI thèm bom quáaaaaaaaa");
+            eva.eatApple(tao01);
+        }
+        console.log(adam);
+        console.log(eva);
+        console.log(tao01);
+
+
+
+    </script>
+</body>
+
+</html>
